@@ -40,16 +40,12 @@
   Stop
 # Program:
 #include <stdio.h>
-
-// Function to swap using call by value
 void swapByValue(int a, int b) {
     int temp = a;
     a = b;
     b = temp;
     printf("Inside swapByValue: a = %d, b = %d\n", a, b);
 }
-
-// Function to swap using call by reference
 void swapByReference(int *a, int *b) {
     int temp = *a;
     *a = *b;
@@ -58,30 +54,19 @@ void swapByReference(int *a, int *b) {
 
 int main() {
     int x, y;
-
     printf("Enter two integers: ");
     scanf("%d %d", &x, &y);
-
     printf("\nBefore swapping: x = %d, y = %d\n", x, y);
-
-    // Call by value demonstration
     swapByValue(x, y);
     printf("After swapByValue (main): x = %d, y = %d\n", x, y);
-
-    // Call by reference demonstration
     swapByReference(&x, &y);
     printf("After swapByReference (main): x = %d, y = %d\n", x, y);
-
     return 0;
 }
 
 # Output:
-Enter two integers: 23 90
+<img width="530" height="303" alt="image" src="https://github.com/user-attachments/assets/9b1007a5-06dc-4703-8c68-7558107b0fb2" />
 
-Before swapping: x = 23, y = 90
-Inside swapByValue: a = 90, b = 23
-After swapByValue (main): x = 23, y = 90
-After swapByReference (main): x = 90, y = 23
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -120,13 +105,11 @@ After swapByReference (main): x = 90, y = 23
   Stop
 # Program:
 #include <stdio.h>
-
-// Recursive function to calculate nth Fibonacci number
 int fibonacci(int n) {
     if (n == 0)
-        return 0;  // 0th term
+        return 0;  
     else if (n == 1)
-        return 1;  // 1st term
+        return 1; 
     else
         return fibonacci(n - 1) + fibonacci(n - 2);
 }
@@ -152,9 +135,8 @@ int main() {
 }
 
 # Output:
-Enter the number of terms (positive integer): 5
-Fibonacci Series (first 5 terms):
-0 1 1 2 3 
+<img width="565" height="233" alt="image" src="https://github.com/user-attachments/assets/7aa96a7f-018c-42c5-9081-8925d5acd701" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -197,50 +179,37 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 #include <stdio.h>
-
-// Recursive function to print numbers from low to high with step 2
 void printSequence(int current, int high) {
     if (current > high) {
-        return; // Base case: stop recursion
+        return; 
     }
-
     printf("%d ", current);
-
-    printSequence(current + 2, high); // Recursive call
+    printSequence(current + 2, high); 
 }
 
 int main() {
     int low, high;
-
     printf("Enter the lower limit: ");
     scanf("%d", &low);
-
     printf("Enter the upper limit: ");
     scanf("%d", &high);
-
     if (low > high) {
         printf("Lower limit should be less than or equal to upper limit.\n");
         return 1;
     }
-
-    // Adjust starting number to match the parity (even or odd) based on lower limit
     if (low % 2 == 0) {
         printf("Even numbers from %d to %d:\n", low, high);
     } else {
         printf("Odd numbers from %d to %d:\n", low, high);
     }
-
-    printSequence(low, high); // Call recursive function
+    printSequence(low, high); 
     printf("\n");
-
     return 0;
 }
 
 # Output:
-Enter the lower limit: 3
-Enter the upper limit: 9
-Odd numbers from 3 to 9:
-3 5 7 9 
+<img width="417" height="272" alt="image" src="https://github.com/user-attachments/assets/872dc0fe-62e3-43ad-b531-e734c6cbe4df" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -284,48 +253,30 @@ Thus, the program was implemented and executed successfully, and the required ou
 # Program:
 #include <stdio.h>
 #include <stdlib.h>
-
 int main() {
     int n, i, sum = 0;
     int *arr;
-
     printf("Enter the number of integers: ");
     scanf("%d", &n);
-
-    // Allocate memory using calloc (initialized to 0)
     arr = (int *)calloc(n, sizeof(int));
     if (arr == NULL) {
         printf("Memory allocation failed.\n");
         return 1;
     }
-
-    // Input integers from user
     printf("Enter %d integers:\n", n);
     for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
-    // Compute sum
     for (i = 0; i < n; i++) {
         sum += arr[i];
     }
-
     printf("Sum of the entered integers: %d\n", sum);
-
-    // Free allocated memory
     free(arr);
-
     return 0;
 }
 
 # Output:
-Enter the number of integers: 4
-Enter 4 integers:
-1
-2
-3
-5
-Sum of the entered integers: 11
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
