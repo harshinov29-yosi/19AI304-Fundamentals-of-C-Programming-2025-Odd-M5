@@ -276,6 +276,7 @@ int main() {
 }
 
 # Output:
+<img width="372" height="378" alt="image" src="https://github.com/user-attachments/assets/4cdd2a62-ed72-4846-856d-e5f36de6ef8d" />
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -313,8 +314,6 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 #include <stdio.h>
-
-// Function to display array elements
 void displayArray(int arr[], int n) {
     int i;
     printf("Array elements are: ");
@@ -325,33 +324,20 @@ void displayArray(int arr[], int n) {
 }
 
 int main() {
-    int n, i;
-    
+    int n, i;    
     printf("Enter the number of elements: ");
     scanf("%d", &n);
-
-    int arr[n]; // Array declaration
-
-    // Read elements into the array
+    int arr[n]; 
     printf("Enter %d integers:\n", n);
     for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
-    // Call user-defined function to display array
     displayArray(arr, n);
-
     return 0;
 }
 
 # Output:
-Enter the number of elements: 5
-Enter 5 integers:
-2
-8
-9
-5
-7
-Array elements are: 2 8 9 5 7 
+<img width="426" height="390" alt="image" src="https://github.com/user-attachments/assets/57a7a936-426b-47eb-b853-edd730bdcdf7" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
